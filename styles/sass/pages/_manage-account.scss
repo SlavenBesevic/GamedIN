@@ -1,0 +1,438 @@
+.manage-account-header {
+  display: flex;
+  justify-content: center;
+  background-color: $grey-dark-footer;
+
+  .manage-account {
+    padding: 20px 0;
+    max-width: 1700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: $media-l) {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    @media (min-width: $media-xxl + 100px) {
+      justify-content: space-between;
+      width: 1700px;
+    }
+
+    h2, h3 { font-family: "Paul-Grotesk-Thin-Trail", sans-serif; }
+    h2, h3, p { color: white; }
+
+    .manage-account-gamer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media (min-width: $media-l) {flex-direction: row; }
+
+      .gamer-image {
+        max-width: 225px;
+        max-height: 225px;
+        margin: 20px;
+        border-radius: 100%;
+        @media (min-width: $media-l) { align-self: flex-start; }
+        @media (min-width: $media-xl) { margin: 20px 10px; }
+        @media (min-width: $media-xxl + 30px) { align-self: auto; }
+      }
+
+      .manage-account-welcome {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        max-width: 400px;
+        margin: 0 10px;
+        align-items: center;
+        text-align: center;
+        @media (min-width: $media-xl) {
+          align-items: flex-start;
+          text-align: left;
+        }
+
+        h2, h3, p {
+          display: inline;
+          margin: 20px 0;
+        }
+
+        .gamer-name {
+          h2, p { font-size: 40px; }
+          p { color: $orange-prim; }
+        }
+
+        .gamer-balance {
+          h3 { font-size: 22px; }
+          p {
+            font-size: 30px;
+            font-weight: bold;
+            margin-left: 20px;
+            small { font-size: 60%; }
+          }
+        }
+
+        p { font-size: 16px; }
+
+        a {
+          color: $blue-prim;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .manage-account-invite-friends {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin: 0 10px;
+      align-items: center;
+      text-align: center;
+      @media (min-width: $media-xl) {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      h2 {
+        font-size: 22px;
+        color: $blue-prim;
+        margin: 0 0 10px 0;
+      }
+
+      p {
+        font-size: 16px;
+        margin: 0;
+      }
+
+      .refferal-ter-img {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        max-width: 450px;
+        margin-top: 10px;
+
+        .gamers-invited {
+          display: flex;
+          flex-direction: row;
+          max-width: 300px;
+          position: relative;
+          @media (max-width: 460px) {display: none;}
+
+          .line {
+            position: absolute;
+            top: 34px;
+            left: 20px;
+            width: 260px;
+            height: 4px;
+            background: $grey-text;
+          }
+
+          .gamer {
+            display: flex;
+            flex-direction: column;
+            width: 60px;
+            margin-top: 15px;
+            z-index: 1;
+
+            img, div {
+              width: 40px;
+              height: 40px;
+              border-radius: 100%;
+              margin: 0 auto;
+              background: $grey-text;
+            }
+
+            p {
+              margin: 5px 0 0;
+              color: $grey-text;
+              font-size: 14px;
+
+              small {
+                font-size: 10px;
+              }
+            }
+          }
+
+          .invited { p { color: $blue-prim; } }
+        }
+
+        p {
+          font-size: 30px;
+          margin: 18px 20px 0 10px;
+          @media (max-width: 460px) {display: none;}
+        }
+
+        .badge {
+          width: 74px;
+          height: 63px;
+          @media (max-width: 460px) {display: none;}
+        }
+      }
+    }
+
+    .manage-account-refferal-code {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 10px;
+      @media (min-width: $media-l) { margin-left: 30px; }
+      @media (min-width: $media-xl) {
+        width: 680px;
+        margin-left: 420px;
+        flex-direction: row;
+        margin-top: 0;
+      }
+      @media (min-width: $media-xxl + 100px) {
+        flex-direction: column;
+        align-items: flex-start;
+        width: auto;
+        margin-left: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #fff;
+        @media (min-width: $media-xl) { margin: 0; }
+        @media (min-width: $media-xxl + 100px) { margin-bottom: 10px; }
+      }
+      input {
+        margin-bottom: 10px;
+        width: 280px;
+        height: 40px;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: $grey-text;
+        border-color: $grey-text;
+        @media (min-width: $media-xl) { margin: 0; }
+        @media (min-width: $media-xxl + 100px) { margin-bottom: 10px; }
+      }
+      a {
+        color: white;
+        background-color: $blue-prim;
+        text-align: center;
+        display: block;
+        width: 140px;
+        padding: 10px;
+        border-radius: 6px;
+        @media (min-width: $media-xxl + 100px) { align-self: flex-end; }
+      }
+    }
+  }
+}
+
+#manage-account-form {
+  max-width: 1800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 1560px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .manage-account-form-header {
+    text-align: center;
+    background: $grey-nav;
+    width: 100%;
+    margin-top: 40px;
+    @media (min-width: 1560px) { height: 95px; }
+
+    p { font-size: 30px; }
+  }
+
+  .step2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+
+    .manage-account-form-header { margin-bottom: 30px; }
+
+    .step2-1 {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      align-items: center;
+
+      @media (min-width: $media-s) {
+        align-items: stretch;
+        margin: 0 15px;
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 10px 0;
+        @media (min-width: $media-s) {
+          flex-direction: row;
+          align-items: center;
+        }
+
+        p {
+          margin: 0;
+          @media (max-width: $media-s) { margin-bottom: 5px; }
+        }
+
+        input {
+          padding: 10px;
+          height: 20px;
+          width: 280px;
+          @media (min-width: $media-xs) {
+            width: 320px;
+          }
+        }
+      }
+
+      .hide-checkbox,
+      .location-checkbox {
+        flex-direction: row;
+
+        input {
+          height: 18px;
+          width: 18px;
+        }
+      }
+
+      .hide-checkbox {
+        justify-content: flex-end;
+        margin-top: -5px;
+        margin-bottom: 5px;
+
+        p { font-size: 18px; }
+
+        input { margin-left: 20px; }
+      }
+
+      .location-checkbox {
+        @media (max-width: $media-s) {
+          align-items: center;
+          width: 344px;
+        }
+        @media (max-width: $media-xs) {
+          width: 304px;
+        }
+        p {
+          font-size: 20px;
+          @media (max-width: $media-s) { width: 280px; }
+        }
+      }
+    }
+  }
+
+  .show-games-optional,
+  .step3 {
+    @media (min-width: 1560px) { width: 49%; }
+  }
+
+  .show-games-optional {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .show-games-optional-ratings {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 260px;
+      margin-top: 30px;
+      @media (min-width: $media-xs) { max-width: 445px; }
+      @media (min-width: $media-m) {
+        max-width: 100%;
+        width: 1000px;
+        justify-content: space-around;
+      }
+
+      .esrb-rating-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 135px;
+        margin: 10px;
+
+        img {
+          max-width: 70px;
+          max-height: 95px;
+        }
+
+        p {
+          width: 70px;
+          height: 95px;
+          line-height: 95px;
+          margin: 0;
+          text-align: center;
+          font-size: 34px;
+        }
+
+        input {
+          min-width: 25px;
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+
+  .step3 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    @media (min-width: $media-m) { flex-direction: row; }
+    @media (min-width: $media-xl) { justify-content: center; }
+    @media (min-width: 1560px) { justify-content: space-around; }
+
+    .step3or {
+      font-size: 22px;
+      @media (max-width: $media-m) { display: none; }
+      @media (min-width: $media-xl) { margin: 0 140px; }
+      @media (min-width: 1560px) { margin: 0; }
+    }
+
+    .step3-1 {
+      text-align: center;
+      max-width: 320px;
+      min-height: 180px;
+      display: table;
+      position: relative;
+
+      p {
+        font-size: 22px;
+        display: table-cell;
+        vertical-align: middle;
+        padding-bottom: 30px;
+      }
+
+      .button-primary {
+        font-size: 22px;
+        width: 100%;
+        padding: 10px 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  .button-primary1 {
+    display: block;
+    font-size: 22px;
+    padding: 10px 0;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 320px;
+    @media (min-width: $media-m) { max-width: 400px; }
+  }
+}

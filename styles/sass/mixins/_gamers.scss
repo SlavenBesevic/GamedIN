@@ -1,0 +1,94 @@
+.gamers {
+  background-color: $grey-dark-background;
+  background-image: url("../images/what-gamers-says.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  padding: 40px 0 70px;
+  
+  h3 {
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 30px;
+  }
+}
+
+.gamer-slide {
+
+  .gamer-quote {
+    background: white;
+    width: 82%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    border-radius: 20px;
+    @media (min-width: $media-l) {
+      flex-direction: row;
+      justify-content: sapce-around;
+      align-items: center;
+      max-width: 1100px;
+    }
+
+    .gamer-img {
+      // margin: auto;
+      @media (min-width: $media-l) {
+        width: 40%;
+      }
+
+      img {
+        max-width: 80%;
+        margin: 10px auto;
+        // margin-top: 10px;
+        @media (min-width: $media-l) {
+          max-width: 90%;
+          margin: 5% auto;
+        }
+      }
+    }
+
+    .gamer-quote-text {
+      @media (min-width: $media-l) {
+        width: 70%;
+      }
+      * {
+        margin: 0;
+        padding: 5px 20px;
+      }
+      h4 {
+        font-size: 32px;
+        color: $orange-prim;
+      }
+      p {
+        color: $grey-text;
+        margin-bottom: 10px;
+        @media (min-width: $media-l) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+
+
+  }
+
+}
+
+
+
+
+
+
+
+.preseravanje {
+  background-color: $orange-prim;
+  text-align: center;
+  padding: 60px 0;
+  * {
+    display: inline-block;
+    margin: 0;
+    padding: 4px;
+    color: white;
+  }
+}

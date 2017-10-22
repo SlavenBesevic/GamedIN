@@ -1,0 +1,120 @@
+.page.request-add {
+  background-image: url('../images/hero-banner-004.jpg');
+  background-repeat: no-repeat;
+  @media (min-width: $media-xl) {
+    background-position: top center;
+    background-size: cover;
+  }
+  @media (min-width: $media-xxl) {
+    display: flex;
+    .wrapper-main {
+      padding: 80px;
+      align-self: center;
+    }
+  }
+
+  .wrapper-main.request-add-game {
+    background: transparent;
+    margin-top: 40px;
+    h2 {
+      font-family: "Paul-Grotesk-Thin-Trail", sans-serif;
+      letter-spacing: 1px;
+    }
+    p {
+      margin: 10px auto;
+      max-width: 450px;
+      font-size: 14px;
+      padding: 0 10px;
+    }
+    form {
+      * {
+        margin: 10px 0 20px 0;
+      }
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+      @media(min-width: $media-s) {
+      width: 350px;
+      }
+      max-width: 350px;
+      margin: 50px auto 0 auto;
+      label {
+        text-align: left;
+        font-size: 18px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        color: #fff;
+        margin-bottom: 0;
+
+      }
+      select {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 30px;
+        font-size: 17px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        min-height: 40px;
+        /*margin-bottom: 20px;*/
+        color: #fff !important;
+        background-image: url(../images/select-arrow.png);
+        background-repeat: no-repeat;
+        background-position: 90% 50%;
+        @media(min-width: $media-s) {
+          background-position: 95% 50%;
+        }
+        -webkit-appearance: none;
+        appearance: none;
+        text-align: left;
+        -moz-appearance: none;
+        option {
+          background-color: #222222;
+          color: #fff;
+          border: none;
+          margin-bottom: 5px;
+        }
+      }
+      input {
+        width: 235px;
+        @media(min-width: $media-s) {
+          width: 335px;  //ZAKUCANO SUROVO
+        }
+        font-size: 17px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        min-height: 30px;
+        color: #fff !important;
+        padding-left: 15px;
+      }
+      textarea {
+        font-size: 17px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        min-height: 30px;
+        color: #fff !important;
+        padding-left: 15px;
+        padding-top: 5px;
+        height: 100px;
+      }
+      button[type^="submit"] {
+        font-size: 17px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        background-color: #F26422;
+        color: #ffffff;
+        width: 100%;
+        min-height: 40px;
+        border: none;
+      }
+    }
+  }
+}

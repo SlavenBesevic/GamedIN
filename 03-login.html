@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GamedIN | LOGIN</title>
+
+    <link href="styles/main.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <nav class='header logged-out static'>
+      <a href="/" class="navbrand">
+        <img src="images/gamedin-logo-9.png" alt="Gamedin Logo">
+      </a>
+      <button class="bell bell-empty">
+        <img src="images/notif3.png" alt="Notification">
+      </button>
+      <button class="menuicon off">
+        <div class="bars">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </button>
+      <ul class='hidden-links hidden'>
+        <li class="prvi login" id="login"><a href="#">Login</a></li>
+        <li class="prvi" id="aboutUs"><a href="#">About Us</a></li>
+        <li class="prvi" id="howItWorks"><a href="#">How it Works</a></li>
+      </ul>
+      <ul class='links'>
+      </ul>
+    </nav>
+
+    <div class="page signup">
+      <div class="wrapper-main">
+        <h2>LOGIN</h2>
+        <div class="form-main">
+          <form method="post" id="login-form" action="#">
+            <div class="form-group">
+              <input type="text" name="username" class="form-control" id="exampleInputUsername" placeholder=" Username:" required="required">
+              <input type="password" name="password" class="form-control" id="exampleInputPassword" placeholder=" Password:" required="required">
+              <label><input type="checkbox" name="rememberMe"/><p>Remember Me</p></label>
+              <button type="submit">LOGIN</button>
+              <p id="sign-up">Don't have an account? <a href="#">Sign up</a></p>
+              <p id="signup-response"></p>
+            </div>
+
+          </form>
+          <div class="form-divider">
+            <div class="line-1"></div>
+            <p>or</p>
+            <div class="line-1"></div>
+          </div>
+          <div class="form-social">
+            <button class="loginBtn loginBtn--facebook">
+              Login with Facebook
+            </button>
+            <button class="loginBtn loginBtn--google">
+              Login with Twitter
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-logo">
+          <img src="images/gamedin-logo-white.png" alt="Gamedin Logo">
+          <p>Lorem ipsum dolor sit amet, consecteteur adipiscing elit, diam nonummy.</p>
+        </div>
+        <div class="footer-links-social-form">
+          <div class="footer-links">
+            <div class="footer-links-1">
+              <div class="footer-links-1-1">
+                <h4>Get Started</h4>
+                <ul class="get-started">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">How it Works</a></li>
+                  <li><a href="#">Cities we are located in</a></li>
+                </ul>
+              </div>
+              <div class="footer-links-1-2">
+                <h4>Help</h4>
+                <ul class="help">
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Gamedin Blog</a></li>
+                  <li><a href="#">Support</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-links-2">
+              <div class="footer-links-2-1">
+                <h4>More</h4>
+                <ul class="more">
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms of Use</a></li>
+                  <li><a href="#">Advertise</a></li>
+                </ul>
+              </div>
+              <div class="footer-links-2-2">
+                <h4>Account</h4>
+                <ul class="account">
+                  <li><a href="#">Login</a></li>
+                  <li><a href="#">Sign Up</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-social-form">
+            <div class="footer-social">
+              <h4>Social</h4>
+              <ul class="social">
+                <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="images/youtube.png" alt=""></a></li>
+                <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+                <li><a href="#"><img src="images/instagram.png" alt=""></a></li>
+              </ul>
+            </div>
+            <div class="footer-form">
+              <h4>Got a question?</h4>
+              <form action="#" method="post">
+                <div class="form-group">
+                  <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email Address">
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" rows="3">How can we help?</textarea>
+                </div>
+                <div class="form-group">
+                  <button type="submit">Ask question</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&#169; Gamedin 2016 All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!-- Nav -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/forms.js"></script>
+
+  </body>
+</html>

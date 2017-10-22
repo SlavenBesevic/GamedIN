@@ -1,0 +1,96 @@
+%home-wrapper {
+  background: white;
+  .content {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+    @media (min-width: $media-l) {
+      align-items: center;
+      justify-content: space-between;
+      min-height: 400px;
+    }
+    @media (min-width: $media-xxl) {
+      justify-content: space-between;
+      max-width: 1500px;
+    }
+
+    div * {
+      display: block;
+      margin: 25px auto;
+      max-width: 82%;
+      @media (min-width: $media-l) {
+        margin: 25px 20px;
+        max-width: 750px;
+      }
+      @media (min-width: $media-xxl) {
+        margin: 25px 75px;
+      }
+    }
+
+    // pitanje je da li je sada uopste potreban ovaj deo
+    .content-image {
+      img {
+        @media (min-width: $media-l) {
+          max-height: 290px;
+        }
+      }
+    }
+
+    .button-primary {
+      width: 100%;
+      padding: 20px 0;
+      @media (min-width: $media-l) {
+        width: 90%;
+        max-width: 400px;
+      }
+    }
+  }
+}
+
+%home-wrapper-img-left {
+  @extend %home-wrapper;
+  .content {
+    @media (min-width: $media-l) {
+      flex-direction: row;
+    }
+  }
+}
+
+%home-wrapper-img-right {
+  @extend %home-wrapper;
+  .content {
+    @media (min-width: $media-l) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+%centered-content {
+  margin: auto;
+  @media (min-width: $media-xxl) {
+    max-width: 1500px;
+  }
+
+  * {
+    margin: 25px auto;
+    display: block;
+    max-width: 82%;
+    text-align: center;
+  }
+
+  .button-primary {
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    @media (min-width: $media-l) {
+      width: 90%;
+      max-width: 500px;
+    }
+  }
+
+  h2 {
+    margin-top: 70px;
+    // font-size: 40px;
+  }
+}

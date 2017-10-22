@@ -1,0 +1,117 @@
+.h2-waitlist {
+  @extend %h2-header;
+  background-image: url('../images/game-exchange.jpg');
+}
+
+.h2-borrow {
+  @extend %h2-header;
+  background-image: url('../images/borrow-game.jpg');
+}
+
+.centered1 {
+  @extend %centered-content;
+  max-width: 1200px;
+  padding: 25px 0;
+}
+
+.centered2 {
+  @extend %centered-content;
+  background-color: $grey-light-background;
+  max-width: 100%;
+  padding: 25px 0;
+
+  > * {
+    color: $orange-prim;
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+
+  .owner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    width: 260px;
+    @media (min-width: $media-s) { width: 380px; }
+
+    * {
+      margin: 0;
+      padding-right: 10px;
+      font-size: 18px;
+    }
+
+    > * { color: $orange-prim; }
+
+    .owner-profile {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 10px;
+      width: 260px;
+      @media (min-width: $media-s) { width: 380px; }
+
+      > * { color: $orange-prim; }
+
+      .gamer-img {
+        max-height: 38px;
+      }
+
+      .owner-reputation {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        .thumbs-up {
+          max-height: 27px;
+          margin-right: 10px;
+        }
+
+        .thumbs-down {
+          max-height: 27px;
+          -ms-transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+          padding-right: 0;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+
+  .game-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > * { margin: 0; }
+
+    .game-info {
+      max-width: none;
+      @include game-info-small;
+      @media (min-width: $media-s) {
+        @include game-info-large;
+      }
+    }
+
+    .available {
+      @include game-availability-small;
+      border-top: 0;
+      max-width: none;
+      @media (min-width: $media-s) {
+        @include game-availability-large;
+      }
+    }
+  }
+}
+
+.last-div {
+
+  .footnote {
+    margin-top: -25px;
+    font-size: 17px;
+    @media (min-width: $media-s) { max-width: 500px; }
+  }
+}

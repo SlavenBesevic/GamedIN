@@ -1,0 +1,65 @@
+.game-exchange-header {
+  margin-bottom: 30px;
+
+  .game-exchange-nav {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    flex-direction: column;
+    @media (min-width: $media-m) { flex-direction: row; }
+    @media (max-width: $media-m) { max-width: 82%; }
+
+    h6 {
+      box-sizing: border-box;
+      border: 2px solid $blue-prim ;
+      text-align: center;
+      margin: 0;
+      padding: 10px 0;
+      @media ( min-width: $media-m) {min-width: 220px; }
+      @media ( min-width: $media-xl) {min-width: 300px; }
+    }
+
+    & :first-child {
+      @media (max-width: $media-m - 1px) {
+        border-bottom: none;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+      }
+      @media (min-width: $media-m) {
+        border-right: none;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+      }
+    }
+
+    & :last-child {
+      @media (max-width: $media-m - 1px) {
+        border-top: none;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+      }
+      @media (min-width: $media-m) {
+        border-left: none;
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+      }
+    }
+
+    .active {
+      background: $blue-prim;
+      a { color: white; }
+    }
+
+    a {
+      color: $blue-prim;
+      font-size: 20px;
+    }
+  }
+
+  p {
+    text-align: center;
+    font-size: 18px;
+    margin: 0 auto;
+    @media (max-width: $media-xl) { max-width: 82%; }
+  }
+}

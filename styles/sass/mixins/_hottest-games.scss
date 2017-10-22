@@ -1,0 +1,61 @@
+@import "game-info";
+
+.hottest-games {
+  background-color: white;
+  padding: 40px 0;
+  
+  .content{
+    margin: auto;
+    @media (min-width: $media-xxl) {
+      max-width: 1500px;
+    }
+    * {
+      margin: 25px auto;
+      text-align: center;
+    }
+
+    h3,
+    p,
+    .button-primary {
+      display: block;
+      max-width: 82%;
+    }
+
+    h3 {
+      margin-top: 0;
+      padding-top: 25px;
+    }
+
+    .button-primary {
+      width: 100%;
+      padding: 20px 0;
+      margin-bottom: 30px;
+      @media (min-width: $media-l) {
+        width: 90%;
+        max-width: 500px;
+      }
+    }
+
+    .hottest-games-carousel {
+      max-width: 82%;
+      .hottest-games-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+        > * { margin: 0; }
+
+        .game-info {
+          @include game-info-small;
+        }
+
+        .available {
+            @include game-availability-small;
+            border-top: 0;
+        }
+      }
+    }
+  }
+}

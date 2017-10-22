@@ -1,0 +1,237 @@
+.page-add-game {
+  background-image: url(../images/hero-banner-003.jpg);
+  background-repeat: no-repeat;
+  @media (min-width: $media-xl) {
+    background-position: top center;
+    background-size: cover;
+  }
+  @media (min-width: $media-xxl) {
+    display: flex;
+
+  }
+  text-align: center;
+  .add-game-wrapper, .add-game-confirmation-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0 40px 0;
+    h1 {
+      font-size: 35px;
+      font-family: "Paul-Grotesk-Thin-Trail", sans-serif;
+      letter-spacing: 1px;
+      color: white;
+    }
+    label {
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      padding-bottom: 20px;
+      text-align: left;
+      width: 150px;
+      span.select2-selection, span.select2-selection__arrow {
+        margin-top: 5px;
+      }
+    }
+    p {
+      font-size: 20px;
+      color: $grey-text;
+    }
+    .games-selected {
+      display: flex;
+      flex-direction: column;
+      .games-selected-individual {
+        display: flex;
+        margin-bottom: 10px;
+        align-self: center;
+        width: 400px;
+        position: relative;
+        @media(max-width: 450px) {
+          width: 300px;
+        }
+        .game-info-points {
+
+          right: 0;
+          bottom: 13px;
+          margin: 0;
+          display: flex;
+          align-self: center;
+
+          > * {
+            display: inline-block;
+            margin: 0;
+          }
+
+          .points-arrow {
+            width: 0;
+            height: 0;
+            border-left: 18px solid transparent;
+          }
+
+          .points-arrow-grey {
+            border-top: 18px solid $grey-points;
+            border-bottom: 18px solid $grey-points;
+            border-right: 9px solid $grey-points;
+          }
+
+          .points-arrow-blue {
+            border-top: 18px solid $blue-prim;
+            border-bottom: 18px solid $blue-prim;
+            border-right: 9px solid $blue-prim;
+          }
+
+          .points-arrow-orange {
+            border-top: 18px solid $orange-prim;
+            border-bottom: 18px solid $orange-prim;
+            border-right: 9px solid $orange-prim;
+          }
+
+          .points-text {
+            width: 69px;
+            height: 36px;
+            display: flex;
+            justify-content: center;
+            @media(max-width: 450px) {
+              width: 50px;
+            }
+
+            * {
+              color: white;
+              font-size: 12px;
+              margin: auto 2px;
+              display: block;
+              @media(max-width: 450px) {
+                font-size: 10px;
+              }
+            }
+          }
+
+          .points-text-grey {
+            background: $grey-points;
+            border-right: 8px solid $grey-points;
+          }
+
+          .points-text-blue {
+            background: $blue-prim;
+            border-right: 8px solid $blue-prim;
+          }
+
+          .points-text-orange {
+            background: $orange-prim;
+            border-right: 8px solid $orange-prim;
+          }
+        }
+        img {
+          height: 36px;
+          margin-left: 5px;
+          align-self: center;
+          cursor: pointer;
+        }
+        p.game-select-title {
+          color: #fff;
+          margin: 0 0 0 10px;
+          align-self: center;
+          max-width: 200px;
+          font-size: 15px;
+          text-align: left;
+          @media(max-width: 450px) {
+            font-size: 12px;
+            max-width: 130px;
+          }
+        }
+        img.games-selected-remove {
+          height: 25px;
+          position: absolute;
+          align-self: center;
+          right: 0;
+        }
+      }
+    }
+    .tos-agreement {
+      padding: 80px 0 0 0;
+      @media(max-width: 450px) {
+        padding: 80px 10px 0 10px;
+      }
+      .tos-agreement-prim {
+        display: flex;
+        justify-content: center;
+        input {
+          align-self: center;
+          margin-right: 10px;
+          width: 20px;
+          height: 20px;
+          @media(max-width: 450px) {
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
+          }
+        }
+        p {
+          color: #fff;
+          font-size: 15px;
+          a {
+            color: $orange-prim;
+          }
+        }
+      }
+      button {
+        width: 400px;
+        height: 40px;
+        background: $orange-prim;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 50px;
+        @media(max-width: 450px) {
+          width: 100%;
+        }
+      }
+      >p {
+        margin-bottom: 15px;
+        font-size: 15px;
+      }
+      a {
+        color: $orange-prim;
+      }
+
+    }
+  }
+  .add-game-confirmation-wrapper, .add-game-wrapper {
+    background-color: $grey-dark-background;
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 80px 10px 80px 10px;
+    @media (min-width: $media-xxl) {
+      padding: 80px;
+      align-self: center;
+    }
+    h2.add-game-confirmation-title {
+      color: #fff;
+      max-width: 600px;
+      align-self: center;
+    }
+    >p {
+      color: #fff;
+    }
+    button {
+      width: 400px;
+      height: 40px;
+      background: $orange-prim;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 30px;
+      align-self: center;
+      margin-top: 100px;
+      @media(max-width: 450px) {
+        width: 100%;
+      }
+    }
+    a {
+      color: #fff;
+    }
+  }
+  .add-game-wrapper {
+    background: transparent;
+    padding: 0 !important;
+  }
+}

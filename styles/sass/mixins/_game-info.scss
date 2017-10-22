@@ -1,0 +1,315 @@
+@mixin game-info-small {
+  width: 260px;
+  height: 140px;
+  position: relative;
+
+  background: white;
+  border: none;
+  box-shadow: 0px 0px 3px $grey-text;
+
+  > * {
+    position: absolute;
+  }
+
+  img {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: 5px;
+    max-width: 115px;
+    max-height: 130px;
+  }
+
+  .game-info-text {
+    top: 0;
+    bottom: 0;
+    margin: 5px;
+    right: 0;
+    width: 125px;
+
+    * {
+      margin: 0;
+      margin-bottom: 4px;
+      font-size: 12px;
+      text-align: left;
+      color: $grey-text;
+    }
+
+    :first-child {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .rating {
+      display: flex;
+      flex-direction: row;
+
+      .star-ratings-sprite {
+        background: url("../images/star1.png") repeat-x;
+        background-size: 12px;
+        font-size: 0;
+        height: 13px;
+        line-height: 0;
+        overflow: hidden;
+        text-indent: -999em;
+        width: 60px;
+        margin: 0;
+      }
+
+      .star-ratings-sprite-rating {
+        background: url("../images/star2.png") repeat-x;
+        background-size: 12px;
+        float: left;
+        height: 12px;
+        display: block;
+      }
+    }
+  }
+
+  .game-info-points {
+    right: 0;
+    bottom: 13px;
+    margin: 0;
+    display: flex;
+
+    > * {
+      display: inline-block;
+      margin: 0;
+    }
+
+    .points-arrow {
+      width: 0;
+      height: 0;
+      border-left: 18px solid transparent;
+    }
+
+    .points-arrow-grey {
+      border-top: 18px solid $grey-points;
+      border-bottom: 18px solid $grey-points;
+      border-right: 9px solid $grey-points;
+    }
+
+    .points-arrow-blue {
+      border-top: 18px solid $blue-prim;
+      border-bottom: 18px solid $blue-prim;
+      border-right: 9px solid $blue-prim;
+    }
+
+    .points-arrow-orange {
+      border-top: 18px solid $orange-prim;
+      border-bottom: 18px solid $orange-prim;
+      border-right: 9px solid $orange-prim;
+    }
+
+    .points-text {
+      width: 69px;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+
+      * {
+        color: white;
+        font-size: 12px;
+        margin: auto 2px;
+        display: block;
+      }
+    }
+
+    .points-text-grey {
+      background: $grey-points;
+      border-right: 8px solid $grey-points;
+    }
+
+    .points-text-blue {
+      background: $blue-prim;
+      border-right: 8px solid $blue-prim;
+    }
+
+    .points-text-orange {
+      background: $orange-prim;
+      border-right: 8px solid $orange-prim;
+    }
+  }
+}
+
+@mixin game-info-large {
+  width: 380px;
+  height: 180px;
+  position: relative;
+
+  background: white;
+  border: none;
+  box-shadow: 0px 0px 3px $grey-text;
+
+  > * {
+    position: absolute;
+  }
+
+  img {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: 5px;
+    max-width: 150px;
+    max-height: 370px;
+  }
+
+  .game-info-text {
+    top: 0;
+    bottom: 0;
+    margin: 5px;
+    right: 0;
+    width: 210px;
+
+    * {
+      margin: 0;
+      margin-bottom: 4px;
+      font-size: 17px;
+      text-align: left;
+    }
+
+
+    :first-child {
+      font-weight: bold;
+      font-size: 19px;
+    }
+
+    .rating {
+      display: flex;
+      flex-direction: row;
+
+      .star-ratings-sprite {
+        background: url("../images/star1.png") repeat-x;
+        background-size: 18px;
+        font-size: 0;
+        height: 19px;
+        line-height: 0;
+        overflow: hidden;
+        text-indent: -999em;
+        width: 90px;
+        margin: 0;
+      }
+
+      .star-ratings-sprite-rating {
+        background: url("../images/star2.png") repeat-x;
+        background-size: 18px;
+        float: left;
+        height: 18px;
+        display: block;
+      }
+    }
+  }
+
+  .game-info-points {
+    right: 0;
+    bottom: 17px;
+    margin: 0;
+    display: flex;
+
+    > * {
+      display: inline-block;
+      margin: 0;
+    }
+
+    .points-arrow {
+      width: 0;
+      height: 0;
+      border-left: 22px solid transparent;
+    }
+
+    .points-arrow-grey {
+      border-top: 22px solid $grey-points;
+      border-bottom: 22px solid $grey-points;
+      border-right: 12px solid $grey-points;
+    }
+
+    .points-arrow-blue {
+      border-top: 22px solid $blue-prim;
+      border-bottom: 22px solid $blue-prim;
+      border-right: 12px solid $blue-prim;
+    }
+
+    .points-arrow-orange {
+      border-top: 22px solid $orange-prim;
+      border-bottom: 22px solid $orange-prim;
+      border-right: 12px solid $orange-prim;
+    }
+
+    .points-text {
+      width: 120px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+
+      * {
+        color: white;
+        font-size: 18px;
+        margin: auto 2px;
+        display: block;
+      }
+    }
+
+    .points-text-grey {
+      background: $grey-points;
+      border-right: 12px solid $grey-points;
+    }
+
+    .points-text-blue {
+      background: $blue-prim;
+      border-right: 12px solid $blue-prim;
+    }
+
+    .points-text-orange {
+      background: $orange-prim;
+      border-right: 12px solid $orange-prim;
+    }
+  }
+}
+
+@mixin game-availability-small {
+  width: 260px;
+  height: 30px;
+  line-height: 30px;
+  background: $grey-nav;
+  text-align: center;
+  border: none;
+  box-shadow: 0px 0px 3px $grey-text;
+  position: relative;
+
+  * {
+    margin: auto;
+    display: inline-block;
+    font-size: 15px;
+  }
+
+  a {
+    position: absolute;
+    top: 1px;
+    bottom: 0;
+    right: 15px;
+  }
+}
+
+@mixin game-availability-large {
+  width: 380px;
+  height: 40px;
+  line-height: 40px;
+  background: $grey-nav;
+  text-align: center;
+  border: none;
+  box-shadow: 0px 0px 3px $grey-text;
+  position: relative;
+
+  * {
+    margin: auto;
+    display: inline-block;
+    font-size: 25px;
+  }
+
+  a {
+    position: absolute;
+    top: 1px;
+    bottom: 0;
+    right: 15px;
+  }
+}

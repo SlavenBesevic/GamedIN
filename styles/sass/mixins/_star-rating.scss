@@ -1,0 +1,18 @@
+.star-ratings-sprite {
+  background: url("images/star1.png") repeat-x;
+  background-size: 12px;
+  font-size: 0;
+  height: 13px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 60px;
+  margin: 0;
+}
+.star-ratings-sprite-rating {
+  background: url("images/star2.png") repeat-x;
+  background-size: 12px;
+  float: left;
+  height: 13px;
+  display: block;
+}

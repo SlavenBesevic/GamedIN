@@ -1,0 +1,38 @@
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.button-primary {
+  color: white;
+  background-color: $orange-prim;
+  text-align: center;
+  &:hover {
+    background-color: $orange-dark;
+  }
+}
+
+.button-secondary {
+  @extend .button-primary;
+  border: 2px solid white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.button-tertiary {
+  @extend .button-primary;
+  color: $grey-text;
+  background-color: $grey-button;
+}
+
+.button-transparent {
+  color: $orange-prim;
+  background-color: transparent;
+  text-align: center;
+  &:hover {
+    color: $orange-dark;
+  }
+}

@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'Paul-Grotesk-Regular-Trail';
+  src: url('fonts/PaulGrotesk-Regular-Trail.eot');
+  src: local('Paul Grotesk Regular-Trail'), local('PaulGrotesk-Regular-Trail'),
+    url('fonts/PaulGrotesk-Regular-Trail.eot?#iefix') format('embedded-opentype'),
+    url('fonts/PaulGrotesk-Regular-Trail.woff2') format('woff2'),
+    url('fonts/PaulGrotesk-Regular-Trail.woff') format('woff'),
+    url('fonts/PaulGrotesk-Regular-Trail.ttf') format('truetype'),
+    url('fonts/PaulGrotesk-Regular-Trail.svg#PaulGrotesk-Regular-Trail') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paul-Grotesk-Thin-Trail';
+  src: url('fonts/PaulGrotesk-Thin-Trail.eot');
+  src: local('Paul Grotesk Thin-Trail'), local('PaulGrotesk-Thin-Trail'),
+    url('fonts/PaulGrotesk-Thin-Trail.eot?#iefix') format('embedded-opentype'),
+    url('fonts/PaulGrotesk-Thin-Trail.woff2') format('woff2'),
+    url('fonts/PaulGrotesk-Thin-Trail.woff') format('woff'),
+    url('fonts/PaulGrotesk-Thin-Trail.ttf') format('truetype'),
+    url('fonts/PaulGrotesk-Thin-Trail.svg#PaulGrotesk-Thin-Trail') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paul-Grotesk-Bold-Trail';
+  src: url('fonts/PaulGrotesk-Bold-Trail.eot');
+  src: local('Paul Grotesk Bold-Trail'), local('PaulGrotesk-Bold-Trail'),
+    url('fonts/PaulGrotesk-Bold-Trail.eot?#iefix') format('embedded-opentype'),
+    url('fonts/PaulGrotesk-Bold-Trail.woff2') format('woff2'),
+    url('fonts/PaulGrotesk-Bold-Trail.woff') format('woff'),
+    url('fonts/PaulGrotesk-Bold-Trail.ttf') format('truetype'),
+    url('fonts/PaulGrotesk-Bold-Trail.svg#PaulGrotesk-Bold-Trail') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+$h1-size1: 50px;
+$h1-size2: 70px;
+h1 {
+  font-family: "Paul-Grotesk-Bold-Trail", sans-serif;
+  color: $blue-prim;
+  font-size: $h1-size1;
+  @media (min-width: $media-xxl) { font-size: $h1-size2; }
+}
+
+h3 {
+  font-size: 40px;
+}
+
+$p-size1: 25px;
+p {
+  font-family: sans-serif;
+  color: white;
+  font-size: $p-size1;
+}
+
+h2, h3, p { color: $grey-text; }
+
+h2 {
+  font-size: 40px;
+  @media(max-width: $media-xs) {
+    font-size: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

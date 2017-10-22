@@ -1,0 +1,117 @@
+.page-ratingexp {
+  .ratingexp-wrapper {
+    padding: 60px 0 60px 0;
+    margin: 30px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: $grey-dark-footer;
+    h2 {
+      font-size: 25px;
+      @media(min-width: $media-s) {
+        font-size: 35px;
+      }
+      margin: 0 0 10px 0;
+      color: #fff;
+
+    }
+    .ratingexp-game {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      @media(min-width: $media-m) {
+        flex-direction: row;
+      }
+      padding: 40px 0 40px 0;
+      .game-info {
+        margin: 0 auto;
+        @include game-info-small;
+        @media(min-width: $media-xs) {
+          @include game-info-large;
+        }
+        @media(min-width: $media-m) {
+          margin: 0 20px 0 0;
+        }
+      }
+      .ratingexp-game-prim {
+        display: flex;
+        flex-direction: column;
+        p {
+          font-size: 20px;
+          color: $orange-prim;
+          margin: 10px 0;
+        }
+        .ratingexp-game-sec {
+          display: flex;
+          align-self: center;
+          @media(min-width: $media-m) {
+            align-self: flex-start;
+          }
+          a {
+            align-self: center;
+            text-decoration: none;
+            color: $orange-prim;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    > p {
+      color: #fff;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .thumbs-rating {
+      padding: 20px 0 40px 0;
+      a {
+        margin: 0 30px 0 30px;
+        .thumbs-up {
+          margin-right: 10px;
+        }
+
+        .thumbs-down {
+          -ms-transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+          padding-right: 0;
+          padding-left: 10px;
+        }
+      }
+    }
+    textarea {
+      font-size: 17px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      background-color: transparent;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      min-height: 30px;
+      color: #fff !important;
+      padding-left: 15px;
+      padding-top: 5px;
+      height: 170px;
+      width: 300px;
+      @media(min-width: $media-s) {
+        width: 450px;
+      }
+      box-sizing: border-box;
+      align-self: center;
+    }
+    button {
+      font-size: 17px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      background-color: #F26422;
+      color: #ffffff;
+      width: 100%;
+      min-height: 40px;
+      border: none;
+      width: 300px;
+      @media(min-width: $media-s) {
+        width: 450px;
+      }
+      align-self: center;
+      margin-top: 30px;
+    }
+  }
+}

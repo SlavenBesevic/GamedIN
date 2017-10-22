@@ -1,0 +1,35 @@
+.centered-content-top {
+  @extend %centered-content;
+  h2 {
+    color: $blue-prim;
+    font-family: "Paul-Grotesk-Thin-Trail", sans-serif;
+    letter-spacing: 1px;
+  }
+}
+
+.wrapper-img-right {
+  @extend %home-wrapper-img-right;
+  .content {
+    border-bottom: 2px solid $grey-light-background;
+    padding: 0;
+  }
+}
+
+.wrapper-img-left {
+  @extend %home-wrapper-img-left;
+  .content {
+    border-bottom: 2px solid $grey-light-background;
+    padding: 0;
+  }
+}
+
+.centered-content-bottom {
+  @extend %centered-content;
+  margin-bottom: 70px;
+  p {
+    margin-bottom: 40px;
+    @media (min-width: $media-l) {
+      max-width: 700px;
+    }
+  }
+}

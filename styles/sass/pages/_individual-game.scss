@@ -1,0 +1,610 @@
+.individual-game {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $media-xl) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  @media (min-width: 1600px) {
+    max-width: 1530px;
+  }
+
+  .game-image {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    @media (min-width: $media-xl) {
+      margin: 40px 0;
+    }
+
+    img {
+      width: 100%;
+      max-width: 380px;
+      margin-bottom: 20px;
+    }
+
+    .available {
+      max-width: 380px;
+      height: 40px;
+      line-height: 40px;
+      background: $blue-prim;
+      text-align: center;
+      border: none;
+      margin-bottom: 20px;
+
+      * {
+        margin: auto;
+        display: inline-block;
+        font-size: 16px;
+        color: white
+      }
+    }
+
+    .button-primary {
+      font-size: 20px;
+      padding: 20px 0;
+      width: 100%;
+      @media (min-width: $media-s) {
+        width: 380px;
+      }
+    }
+  }
+
+  .game-info {
+    background: $grey-dark-footer;
+    padding: 30px;
+    margin-bottom: 40px; //privremeno
+    position: relative;
+    @media (min-width: $media-m) { margin: 0 30px 40px;}
+    @media (min-width: $media-xl) {
+      max-width: 580px;
+      margin: 40px 0;
+    }
+    @media (min-width: 1600px) {
+      max-width: 600px;
+    }
+
+    * {
+      color: white;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+      @media (min-width: $media-s) { margin-right: 60px; }
+    }
+
+    h3 {
+      font-size: 20px;
+      margin: 20px 0 5px 0;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .rating {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+
+      p {
+        margin: 0 0 0 7px;
+        font-size: 18px;
+      }
+
+      small { font-size: 16px; }
+
+      .star-ratings-sprite {
+        background: url("../images/star1.png") repeat-x;
+        background-size: 22px;
+        font-size: 0;
+        height: 22px;
+        line-height: 0;
+        overflow: hidden;
+        text-indent: -999em;
+        width: 110px;
+        margin: 0;
+      }
+
+      .star-ratings-sprite-rating {
+        background: url("../images/star2.png") repeat-x;
+        background-size: 22px;
+        float: left;
+        height: 22px;
+        display: block;
+      }
+    }
+
+    .console {
+      @media (min-width: $media-xl) {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+      }
+
+      select {
+        box-sizing: border-box;
+        width: 110px;
+        height: 44px;
+        background-color: $grey-dark-footer;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 10px;
+        @media (min-width: $media-xs) { width: 160px; }
+      }
+    }
+
+    .game-info-points {
+      position: absolute;
+      right: 0;
+      bottom: 30px;
+      margin: 0;
+      display: flex;
+
+      > * {
+        display: inline-block;
+        margin: 0;
+      }
+
+      .points-arrow {
+        width: 0;
+        height: 0;
+        border-left: 22px solid transparent;
+      }
+
+      .points-arrow-grey {
+        border-top: 22px solid $grey-points;
+        border-bottom: 22px solid $grey-points;
+        border-right: 12px solid $grey-points;
+      }
+
+      .points-arrow-blue {
+        border-top: 22px solid $blue-prim;
+        border-bottom: 22px solid $blue-prim;
+        border-right: 12px solid $blue-prim;
+      }
+
+      .points-arrow-orange {
+        border-top: 22px solid $orange-prim;
+        border-bottom: 22px solid $orange-prim;
+        border-right: 12px solid $orange-prim;
+      }
+
+      .points-text {
+        width: 120px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+
+        * {
+          color: white;
+          font-size: 18px;
+          margin: auto 2px;
+          display: block;
+        }
+      }
+
+      .points-text-grey {
+        background: $grey-points;
+        border-right: 12px solid $grey-points;
+      }
+
+      .points-text-blue {
+        background: $blue-prim;
+        border-right: 12px solid $blue-prim;
+      }
+
+      .points-text-orange {
+        background: $orange-prim;
+        border-right: 12px solid $orange-prim;
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      max-width: 50px;
+      display: none;
+      @media (min-width: $media-s) { display: block; }
+    }
+  }
+
+  .game-nearby {
+    background: $grey-light-background;
+    margin-bottom: 40px;
+    @media (min-width: $media-m) { margin: 0 30px 40px;}
+    @media (min-width: $media-xl) {
+      margin: 0 0 40px;
+      width: 510px;
+    }
+    @media (min-width: 1600px) {
+      margin: 40px 0;
+      width: 450px;
+    }
+
+    > * { margin: 0 0 0 30px; }
+
+    .nearby-title {
+      background: $grey-nav;
+      margin: 0;
+      padding: 0 30px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      @media (min-width: $media-l) { justify-content: flex-start; }
+
+      h4 {
+        margin-right: 20px;
+        color: $grey-text;
+        font-size: 16px;
+      }
+
+      p {
+        margin: 0 10px 0 0;
+        font-size: 16px;
+      }
+    }
+
+    .gamer-nearby {
+      overflow-y: scroll;
+      height: 380px;
+      @media (min-width: 1600px) { height: 520px; }
+
+      .gamer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px 0;
+
+        * { color: $grey-text; }
+
+        .gamer-name {
+          background-image: url("../images/member.png");
+          background-repeat: no-repeat;
+          background-position: left center;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          position: relative;
+
+          img {
+            position: absolute;
+            left: 0;
+            max-width: 30px;
+            max-height: 30px;
+          }
+
+          p {
+            margin: 0 0 0 40px;
+            font-size: 16px;
+            @media (max-width: $media-xs) { max-width: 130px; }
+          }
+        }
+
+        .gamer-location {
+          background-image: url("../images/distance-marker.png");
+          background-repeat: no-repeat;
+          background-position: left center;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-end;
+          width: 95px;
+          margin-right: 10px;
+
+          img {
+            height: 18px;
+            width: 14px;
+          }
+
+          p {
+            font-size: 14px;
+            padding-left: 5px;
+          }
+        }
+      }
+
+      .selected {
+        * { color: $orange-prim; }
+
+        .gamer-name { background-image: url("../images/member-selected.png"); }
+        .gamer-location { background-image: url("../images/distance-marker-selected.png"); }
+      }
+    }
+
+  }
+
+  .member-reviews {
+    background: $grey-light-background;
+    margin-bottom: 40px;
+    @media (min-width: $media-m) { margin: 0 30px 40px;}
+    @media (min-width: $media-xl) {
+      margin: 0 0 40px;
+      width: 510px;
+    }
+
+    > * { margin: 0 0 0 30px; }
+
+    .reviews {
+      background: $grey-nav;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 0;
+      padding: 0 30px;
+
+      .member {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0;
+        padding-bottom: 20px;
+        width: 100%;
+        border-bottom: 1px solid $grey-text;
+      }
+
+      h4 {
+        margin: 20px 0;
+        color: $grey-text;
+        font-size: 16px;
+      }
+
+      a {
+        padding-right: 30px;
+        color: $orange-prim;
+        font-size: 16px;
+      }
+
+      p {
+        margin: 0 10px 0 0;
+        font-size: 16px;
+      }
+
+      .thumbs-up {
+        max-height: 27px;
+        margin-right: 30px;
+      }
+
+      .thumbs-down {
+        max-height: 27px;
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+
+    .gamer-reviews {
+      overflow-y: scroll;
+      height: 335px;
+      @media (min-width: 1600px) { height: 420px; }
+
+      .review {
+        padding: 15px 0;
+
+        * { color: $grey-text; }
+
+        .review-title {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding-bottom: 10px;
+
+          * { font-size: 16px; }
+
+          .thumbs-up {
+            max-height: 27px;
+            margin-right: 20px;
+          }
+
+          .thumbs-down {
+            max-height: 27px;
+            -ms-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+            margin-right: 20px;
+          }
+
+          p { margin: 0; }
+        }
+
+        .review-info {
+          display: flex;
+          flex-direction: row;
+
+          p, a {
+            font-size: 15px;
+            margin: 0;
+          }
+
+          a {
+            text-decoration: none;
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .map {
+    min-height: 500px;
+    min-width: 500px;
+    margin: 0 0 40px;
+    background: green;
+    @media (max-width: $media-s) {display: none; }
+    @media (min-width: $media-m) { margin: 0 30px 40px; }
+    @media (min-width: $media-xl) {
+      margin: 0 0 40px;
+      width: 100%;
+    }
+    @media (min-width: 1600px) {
+      width: 1000px;
+    }
+  }
+}
+
+
+.game-reviews {
+  background: $grey-light-background;
+  position: relative;
+  margin-bottom: 120px;
+  @media (min-width: $media-m) { margin: 0 30px 120px; }
+  @media (min-width: $media-xl) {
+    margin: 0 auto 120px;
+    max-width: 1040px;
+  }
+  @media (min-width: 1600px) { max-width: 1530px; }
+  // @media (min-width: $media-xl) { margin: 0 30px 0 0; }
+
+  > * { margin: 0 0 0 30px; }
+
+  .game-reviews-title {
+    background: $grey-nav;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 0 10px 0;
+    @media (min-width: $media-s) {
+      flex-direction: row;
+      padding-left: 30px;
+    }
+
+    h4 {
+      margin-right: 20px;
+      color: $grey-text;
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0 10px 0 0;
+      font-size: 16px;
+    }
+
+    .rating {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+
+      p {
+        margin: 0 0 0 10px;
+        font-size: 18px;
+      }
+
+      .star-ratings-sprite {
+        background: url("../images/star1.png") repeat-x;
+        background-size: 22px;
+        font-size: 0;
+        height: 22px;
+        line-height: 0;
+        overflow: hidden;
+        text-indent: -999em;
+        width: 110px;
+        margin: 0;
+      }
+
+      .star-ratings-sprite-rating {
+        background: url("../images/star2.png") repeat-x;
+        background-size: 22px;
+        float: left;
+        height: 22px;
+        display: block;
+      }
+    }
+  }
+
+  .game-reviews-content {
+    height: 400px;
+    overflow-y: scroll;
+
+    .review {
+      padding: 15px 0;
+      border-bottom: 1px solid $grey-text;
+
+      * { color: $grey-text; }
+
+      .review-title {
+        display: flex;
+        flex-direction: row;
+
+        * { font-size: 20px; }
+
+        p { margin: 0; }
+      }
+
+      .review-text {
+        p {
+          font-size: 14px;
+          padding-right: 30px;
+        }
+      }
+
+      .review-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        p, a {
+          font-size: 15px;
+          margin: 0;
+        }
+
+        a {
+          text-decoration: none;
+          margin-left: 20px;
+        }
+
+        .rating {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+
+          p {
+            margin: 0 30px 0 10px;
+          }
+
+          .star-ratings-sprite {
+            background: url("../images/star1.png") repeat-x;
+            background-size: 20px;
+            font-size: 0;
+            height: 20px;
+            line-height: 0;
+            overflow: hidden;
+            text-indent: -999em;
+            width: 100px;
+            margin: 0;
+          }
+
+          .star-ratings-sprite-rating {
+            background: url("../images/star2.png") repeat-x;
+            background-size: 20px;
+            float: left;
+            height: 20px;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .button-primary {
+    position: absolute;
+    bottom: -80px;
+    left: -30px;
+    font-size: 20px;
+    padding: 20px 0;
+    width: 100%;
+    @media (min-width: $media-m) {
+      width: 380px;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.subscription-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .subscription-header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @media(min-width: $media-m) {
+      margin-bottom: 50px;
+    }
+    h2 { // PROVERITI DAL OVO OSTAVITI !!
+      color: $blue-prim;
+      margin-bottom: 10px;
+      font-family: "Paul-Grotesk-Thin-Trail", sans-serif;
+      letter-spacing: 1px;
+    }
+    p {
+      color: $grey-text;
+      font-size: 15px;
+      max-width: 700px;
+      align-self: center;
+    }
+  }
+  .subscription-service-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    max-width: 1300px;
+    // align-self: center;
+    @media(min-width: 1250px) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    .subscription-service {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 40px;
+      .subscription-banner {
+        width: 100%;
+        max-width: 350px;
+        background-image: url(../images/hero-banner-001.jpg);
+        align-self: center;
+        position: relative;
+        @media(min-width: 1250px) {
+          width: 350px;
+        }
+        .subscription-plan {
+          color: $orange-prim;
+          font-size: 30px;
+        }
+        .subscription-price-prim {
+          color: #fff;
+          background-color: $blue-prim;
+          padding: 10px 0 10px 0;
+          margin-bottom: 0;
+          font-size: 30px;
+        }
+        .subscription-price-sec {
+          color: white;
+          margin-top: 0;
+          font-size: 15px;
+        }
+        .subscription-discount {
+          color: white;
+          min-height: 20px;
+          font-size: 17px;
+        }
+        .subscription-points-prim {
+          color: $blue-prim;
+          margin-bottom: 0;
+        }
+        .subscription-points-sec {
+          color: white;
+          margin-top: 0;
+          font-size: 17px;
+          margin-bottom: 30px;
+        }
+        .subscription-bonus {
+          background-color: rgba(255,255,255, 0.15);
+          padding: 20px 0 15px 0;
+          color: $blue-prim;
+          font-size: 20px;
+          margin: 10px 0 5px 0;
+          align-self: center;
+        }
+        .sub-ribbon {
+          position: absolute;
+          top: 0;
+          left: 20px;
+        }
+      }
+      button {
+        width: 100%;
+        max-width: 350px;
+        align-self: center;
+        margin: 30px auto;
+        height: 35px;
+        background-color: $orange-prim;
+        color: white;
+        border: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import "../mixins/hero-banner";
+@import "../mixins/hottest-games";
+@import "../mixins/gamers";
+
+.free-forever {
+  @extend %home-wrapper-img-right;
+}
+
+.play-games {
+  @extend %home-wrapper-img-left;
+  background-color: $orange-prim;
+  .content {
+    .content-text {
+      h3, p { color: white; }
+    }
+  }
+}
+
+.expirience {
+  @extend %home-wrapper-img-right;
+  background-color: $grey-light-background;
+}
